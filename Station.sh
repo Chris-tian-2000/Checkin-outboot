@@ -3,9 +3,29 @@
 echo "Welcome to your new shipping station!"
 sleep 2
 
-echo "Installing some essentials - Stand by."
+echo "Setting up your station"
 sleep 2
 
+xdotool mousemove 460 170
+
+xdotool click 3
+sleep 1
+
+xdotool mousemove 465 380
+sleep 1
+
+xdotool click 1
+sleep 4
+
+xdotool mousemove 460 170
+
+xdotool click 1
+
+xdotool mousemove 460 215
+
+xdotool click 1
+
+echo "Updating"
 sudo apt update 
 sudo apt full-upgrade
 sudo apt-get install network-manager
