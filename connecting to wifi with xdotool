@@ -1,0 +1,67 @@
+#!bin/bash
+
+xdotool mousemove 220 40
+
+xdotool click 1
+
+xdotool mousemove 350 350
+
+xdotool click 1
+sleep 2
+
+xdotool type sudo
+sleep 1
+
+xdotool key space
+
+xdotool type nano
+sleep 1
+
+xdotool key space
+
+xdotool type /etc/wpa_supplicant/wpa_supplicant.conf
+
+xdotool key Return
+sleep 2
+
+xdotool type ctrl_interface=/run/wpa_supplicant
+xdotool key Return
+sleep 1
+
+xdotool type update_config=1
+xdotool key Return
+xdotool key Return
+sleep 1
+
+xdotool type network={
+sleep 1
+xdotool key Return
+sleep 1
+
+xdotool type ssid
+sleep 1
+xdotool key equal
+sleep 1
+
+xdotool type "
+xdotool type Picanova_Iot
+sleep 1
+xdotool type "
+xdotool key Return
+sleep 1
+
+xdotool type scan_ssid
+xdotool key equal
+xdotool type 1
+xdotool key Return
+sleep 1
+
+xdotool type psk
+sleep 1
+xdotool key equal
+xdotool type "
+xdotool type J<G?rK}kv6QDJx5y
+sleep 1
+xdotool type "
+
+xdotool type }
