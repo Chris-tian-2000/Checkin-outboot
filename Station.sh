@@ -30,6 +30,7 @@ sudo apt update
 sudo apt full-upgrade
 sudo apt-get install network-manager
 sudo apt-get install xdotool
+sudo apt-get install expect
 
 #Install and disable the firewall.
 sudo apt install ufw
