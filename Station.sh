@@ -32,7 +32,7 @@ rm "$tmp_file"
 echo "Wi-Fi credentials updated successfully."
 
 
-echo "Updating"
+echo "Updating System.."
 sudo apt update 
 sudo apt full-upgrade
 sudo apt-get install network-manager -y
@@ -41,6 +41,9 @@ sudo apt-get install xdotool -y
 #Install and disable the firewall.
 sudo apt install ufw -y
 sudo ufw disable
+
+echo "Updating Complete!"
+
 
 #Adjusting the size of the screen
 echo "Setting up your station."
@@ -82,7 +85,7 @@ wget -O ~/home/picanova/Downloads/teamviewer-host_armhf.deb  https://download.te
 #Download and set tcgroup  background
 wget -O image.jpg "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/landscape_16_9-v3/image_uploads/db21535e-df8c-41d6-ba34-976a3b860bfb/ori>
 
-pcmanfm --set-wallpaper="/home/picanova/image.jpg"
+pcmanfm --set-wallpaper="/home/picanova/Downloads/image.jpg"
 
 echo "Is this a check-in/out station? (y/n)"
 
@@ -110,6 +113,7 @@ sudo sed -i 's/raspberrypi/'$hostname'/g' /etc/hostname
 echo "This script only runs once, it will be deleted now."
 sleep 1
 #sudo rm station.sh
+#rm checkin-outboot.sh
 
 echo "Rebooting.."
 sleep 1
