@@ -5,8 +5,6 @@ echo "Welcome to your new shipping station!"
 echo "Change from fullscreen to  windowed mode before we get going. ."
 sleep 6
 
-#Wifi Connection
-
 # Prompt for SSID
 read -p "Enter the SSID: " SSID
 
@@ -74,6 +72,12 @@ xdotool mousemove 610 140
 
 xdotool click 1
 
+sudo mv /home/picanova/Desktop/Tempauto /home/picanova
+sleep 1
+sudo mv /home/picanova/Desktop/Scripts /home/picanova
+sleep 1
+sudo mv /home/picanova/Desktop/picanova /etc
+sleep 1
 
 sudo apt install chromium-browser -y
 echo "Chromium is now installed!"
@@ -94,7 +98,7 @@ read response
 while true; do
 
     if [[ "$response" =~ ^[Yy]$ ]]; then
-        source checkin-out.sh
+        source /home/picanova/Scripts/checkin-out.sh
         break
     elif [[ "$response" =~ ^[Nn]$ ]]; then
         break
@@ -114,6 +118,8 @@ echo "This script only runs once, it will be deleted now."
 sleep 1
 #sudo rm station.sh
 #rm checkin-outboot.sh
+
+sudo mv station.sh /home/picanova/Scripts
 
 echo "Rebooting.."
 sleep 1
